@@ -9,7 +9,6 @@ import java.util.UUID;
 
 public interface VueloInterface extends JpaRepository<Vuelo, Long> {
 
-        //  CONSULTAS USANDO QUERY METHODS
 
         List<Vuelo> findByOrigen(String origen);
 
@@ -21,12 +20,10 @@ public interface VueloInterface extends JpaRepository<Vuelo, Long> {
 
         List<Vuelo> findAllByOrderByOrigenAsc();
 
-
-        // CONSULTAS USANDO JPQL
-
-
         List<Vuelo> findVuelosConMultiplesAerolineas();
+        
 
+        
         @Query("SELECT COUNT(v) FROM Vuelo v WHERE v.origen = :origen")
         long countVuelosDesdeOrigen(String origen);
 
