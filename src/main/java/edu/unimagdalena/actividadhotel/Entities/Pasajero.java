@@ -2,6 +2,7 @@ package edu.unimagdalena.actividadhotel.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;
 
@@ -23,6 +24,7 @@ public class Pasajero {
 
     @OneToMany(mappedBy = "pasajero")
     private Set<Reserva> reservas;
+
 
 
 

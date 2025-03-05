@@ -18,5 +18,4 @@ public class Aerolinea {
 
     @ManyToMany(mappedBy = "aerolineas")
     private Set<Vuelo> vuelos;
-
 }
